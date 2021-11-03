@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web PlayGround - Code Editor</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <div class="flex-item-1">
+        <nav class="navbar">
+          <ul>
+            <li class="titleNav">
+              <a href="#" class="titleNavLink">Web playground</a>
+            </li>
+            <span class="ariahidden"></span>
+            <li class="navitem active" onclick="toggle(this,0)">
+              <a href="#" class="htmlNavLink">HTML</a>
+            </li>
+            <li class="navitem" onclick="toggle(this,1)">
+              <a href="#" class="cssNavLink">CSS</a>
+            </li>
+            <li class="navitem" onclick="toggle(this,2)">
+              <a href="#" class="jsNavLink">JS</a>
+            </li>
+            <li class="navitem active" onclick="toggle(this,3)">
+              <a href="#" class="resultNavLink">RESULT</a>
+            </li>
+            <span class="ariahidden"></span>
+            <li class="navitem optionsNav">
+              <a href="#" class="optionsNavLink">OPTIONS &#9656;</a>
+              <ul>
+                <li style="display: none;"><a href="#">Save Code Locally</a></li>
+                <li><a href="#" id="chTheme" onclick="changeTheme()">Switch Theme</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#" class="hbmNavIcon" onclick="navToggle()">&#9776;</a>
+        </nav>
+      </div>
+      <div data-flex-splitter-horizontal class="flex-item-2 bigscreen">
+        <div id="htmlEditor" class="editor fi-2-column-1 con"><p class="greet">Hello</p>
+</div>
+        <div id="cssEditor" class="editor fi-2-column-2 con">body{background:#222;}
+.greet {color:red;}
+</div>
+        <div id="jsEditor" class="editor fi-2-column-3 con">document.querySelectorAll(".greet")[0].innerHTML+=" World..!";
+</div>
+        <iframe id="ifrResult" class="fi-2-column-4 con"></iframe>
+      </div>
+    </div>
+	<script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript" src="./ace/ace.js"></script>
+	<script type="text/javascript" src="./ace/mode-css.js"></script>
+	<script type="text/javascript" src="./ace/mode-javascript.js"></script>
+	<script type="text/javascript" src="./ace/mode-html.js"></script>
+	<script type="text/javascript" src="./ace/worker-css.js"></script>
+	<script type="text/javascript" src="./ace/worker-javascript.js"></script>
+	<script type="text/javascript" src="./ace/worker-html.js"></script>
+	<script type="text/javascript" src="./ace/theme-crimson_editor.js"></script>
+	<script type="text/javascript" src="./ace/theme-monokai.js"></script>
+  </body>
+</html>
